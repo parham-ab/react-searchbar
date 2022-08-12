@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Results from "./Results";
 
 const Searchbar = ({ data }) => {
   const [inputVal, setInputVal] = useState("");
@@ -10,7 +11,6 @@ const Searchbar = ({ data }) => {
     const filteredItems = data.filter((item) => {
       return item.title.toLowerCase().includes(e.target.value.toLowerCase());
     });
-    console.log(filteredItems);
 
     inputVal === "" ? setFilteredData([]) : setFilteredData(filteredItems);
   };
@@ -23,6 +23,10 @@ const Searchbar = ({ data }) => {
         value={inputVal}
         onChange={filterHandle}
       />
+      {filteredData.length !== 0 &&
+        filteredData
+          .slice(0, 10)
+          .map((item) => <Results result={item} key={item.id} />)}
     </div>
   );
 };
