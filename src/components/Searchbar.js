@@ -23,14 +23,14 @@ const Searchbar = ({ data }) => {
         placeholder="Search..."
         ref={newInputVal}
         onChange={filterHandle}
-        // onBlur={() => setFilteredData([])}
+        onBlur={() => setFilteredData([])}
       />
       <div
         className={filteredData.length !== 0 ? `results-container` : undefined}
       >
         {filteredData.length !== 0 &&
           filteredData
-            .slice(0, 10)
+            .slice(0, 13)
             .map((item) => <Results result={item} key={item.id} />)}
       </div>
     </div>
