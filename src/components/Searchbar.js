@@ -1,16 +1,17 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Results from "./Results";
 
 const Searchbar = ({ data }) => {
   const [inputVal, setInputVal] = useState(" ");
   const [filteredData, setFilteredData] = useState([]);
+  const newInputVal = useRef();
   // filterHandle
   const filterHandle = (e) => {
     setInputVal(e.target.value);
     const filteredItems = data.filter((item) => {
       return item.title.toLowerCase().includes(e.target.value.toLowerCase());
     });
-    inputVal === "" ? setFilteredData([]) : setFilteredData(filteredItems);
+    newInputVal === "" ? setFilteredData([]) : setFilteredData(filteredItems);
   };
 
   return (
@@ -18,7 +19,7 @@ const Searchbar = ({ data }) => {
       <input
         type="text"
         placeholder="Search..."
-        value={inputVal}
+        ref={newInputVal}
         onChange={filterHandle}
         onBlur={() => setFilteredData([])}
       />
