@@ -12,5 +12,4 @@ const Results = ({ result }) => {
     </div>
   );
 };
-
 export default Results;

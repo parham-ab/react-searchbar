@@ -41,5 +41,4 @@ const Searchbar = ({ data }) => {
     </div>
   );
 };
-
 export default Searchbar;

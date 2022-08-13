@@ -17,5 +17,4 @@ const App = () => {
 
   return <Searchbar data={mainData} />;
 };
-
 export default App;
