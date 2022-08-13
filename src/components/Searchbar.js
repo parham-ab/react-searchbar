@@ -10,8 +10,9 @@ const Searchbar = ({ data }) => {
   const filterHandle = (e) => {
     setInputVal(e.target.value);
     const filteredItems = data.filter((item) => {
-      return item.title.toLowerCase().includes(e.target.value.toLowerCase());
+      return item.name.toLowerCase().includes(e.target.value.toLowerCase());
     });
+    console.log("All filtered results👉", filteredItems);
     newInputVal.current.value.length === 0
       ? setFilteredData([])
       : setFilteredData(filteredItems);

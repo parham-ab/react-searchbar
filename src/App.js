@@ -8,7 +8,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://jsonplaceholder.typicode.com/posts`
+        `https://jsonplaceholder.typicode.com/comments`
       );
       setMainData(response.data);
     };
