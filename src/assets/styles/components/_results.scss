@@ -1,12 +1,12 @@
 // results
 .results-container {
   margin: 0 auto;
-  width: 380px;
-  border: solid 1px gray;
+  width: 300px;
+  border: solid 1px #dbdbdb;
   padding: 10px;
   overflow: auto;
   height: 150px;
-  border-radius: 9px;
+  border-radius: 0 0 9px 9px;
 }
 .results-list {
   .result-title {
@@ -15,6 +15,11 @@
     margin: 5px;
     border-radius: 7px;
     width: 100%;
+    transition: all 0.1s ease;
+    &:hover {
+      box-shadow: rgb(0 0 0 / 20%) 0px 4px 12px;
+      transition: all 0.3s ease;
+    }
   }
   display: flex;
   align-items: center;
@@ -22,12 +27,5 @@
   svg {
     color: #195197;
     font-size: 20px;
-  }
-}
-// media queries
-@media screen and (max-width: 425px) {
-  .results-container {
-    width: 300px;
-    height: 250px;
   }
 }

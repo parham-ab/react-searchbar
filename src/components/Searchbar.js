@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+// components
 import Results from "./Results";
 
 const Searchbar = ({ data }) => {
@@ -23,6 +24,9 @@ const Searchbar = ({ data }) => {
         placeholder="Search..."
         ref={newInputVal}
         onChange={filterHandle}
+        style={{
+          borderRadius: filteredData.length ? "10px 10px 0 0" : "10px",
+        }}
         onBlur={() => setFilteredData([])}
       />
       <div
