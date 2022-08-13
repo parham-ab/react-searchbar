@@ -8,9 +8,19 @@
   height: 150px;
   border-radius: 9px;
 }
-.result-title {
-  background: #efefef;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 7px;
+.results-list {
+  .result-title {
+    background: #efefef;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 7px;
+    width: 100%;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  svg {
+    color: #195197;
+    font-size: 20px;
+  }
 }

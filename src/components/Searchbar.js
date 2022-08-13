@@ -23,7 +23,7 @@ const Searchbar = ({ data }) => {
         placeholder="Search..."
         ref={newInputVal}
         onChange={filterHandle}
-        onBlur={() => setFilteredData([])}
+        // onBlur={() => setFilteredData([])}
       />
       <div
         className={filteredData.length !== 0 ? `results-container` : undefined}
