@@ -11,7 +11,10 @@ const Searchbar = ({ data }) => {
     const filteredItems = data.filter((item) => {
       return item.title.toLowerCase().includes(e.target.value.toLowerCase());
     });
-    newInputVal === "" ? setFilteredData([]) : setFilteredData(filteredItems);
+    newInputVal.current.value.length === 0
+      ? setFilteredData([])
+      : setFilteredData(filteredItems);
+    console.log(newInputVal.current.value.length);
   };
 
   return (
