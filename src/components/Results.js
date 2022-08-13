@@ -4,7 +4,7 @@ const Results = ({ result }) => {
 //   console.log(result);
   return (
     <div>
-      <p>{result.title}</p>
+      <p className="result-title">{result.title}</p>
     </div>
   );
 };

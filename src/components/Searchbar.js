@@ -14,7 +14,6 @@ const Searchbar = ({ data }) => {
     newInputVal.current.value.length === 0
       ? setFilteredData([])
       : setFilteredData(filteredItems);
-    console.log(newInputVal.current.value.length);
   };
 
   return (
