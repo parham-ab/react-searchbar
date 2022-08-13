@@ -15,18 +15,22 @@ const Searchbar = ({ data }) => {
   };
 
   return (
-    <div>
+    <div className="searchbar-container">
       <input
         type="text"
         placeholder="Search..."
         ref={newInputVal}
         onChange={filterHandle}
-        onBlur={() => setFilteredData([])}
+        // onBlur={() => setFilteredData([])}
       />
-      {filteredData.length !== 0 &&
-        filteredData
-          .slice(0, 10)
-          .map((item) => <Results result={item} key={item.id} />)}
+      <div
+        className={filteredData.length !== 0 ? `results-container` : undefined}
+      >
+        {filteredData.length !== 0 &&
+          filteredData
+            .slice(0, 10)
+            .map((item) => <Results result={item} key={item.id} />)}
+      </div>
     </div>
   );
 };
